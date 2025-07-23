@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <h1 class="text-2xl font-bold text-blue-600">TailwindCo</h1>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+          <a href="#" class="text-gray-700 hover:text-blue-600">Anasayfa</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">Hakkımızda</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">Hizmetler</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">İletişim</a>
+        </nav>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menuBtn" class="text-gray-600 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="#" class="block text-gray-700 hover:text-blue-600">Anasayfa</a>
+      <a href="#" class="block text-gray-700 hover:text-blue-600">Hakkımızda</a>
+      <a href="#" class="block text-gray-700 hover:text-blue-600">Hizmetler</a>
+      <a href="#" class="block text-gray-700 hover:text-blue-600">İletişim</a>
+    </div>
+  </header>
+
+  <!-- Ana İçerik -->
+  <main class="max-w-7xl mx-auto px-4 py-10">
+    <section class="mb-10 text-center">
+      <h2 class="text-2xl font-semibold mb-4">Selam</h2>
+      <p class="text-gray-600 mb-6">
+        Bu sayfa Tailwind CSS ile hazırlandı.
+      </p>
+      <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-xl shadow hover:bg-blue-700 transition">
+        Daha Fazla Bilgi
+      </a>
+    </section>
+
+    <!-- Kartlar -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl shadow p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-blue-500 mb-2">Hızlı</h3>
+        <p>Tailwind ile hızla arayüz geliştirebilirsin.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-green-500 mb-2">Esnek</h3>
+        <p>İstediğin tasarımı sınırsız şekilde uygulayabilirsin.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-purple-500 mb-2">Modern</h3>
+        <p>Modern tasarımlar yapmak artık çok kolay.</p>
+      </div>
+    </section>
+  </main>
+
+  
+
+
+  <!-- Footer -->
+  <footer class="bg-white mt-10 py-6 text-center text-sm text-gray-500">
+    © 2025 Tailwind Web. Tüm hakları saklıdır.
+  </footer>
+ 
+
+<div class="flex justify-center mt-10 ">
+ <section class="grid grid-cols-1  gap-6 ">
+  <div class="bg-white rounded-2xl shadow p-6 hover:shadow-lg transition"> 
+    <h3 class="text-xl font-semibold text-purple-500 mb-2 text-center"> İletişim Bilgileri</h3>
+      <p>Mail: burakbazoc@gmail.com</p>
+  </div>
+ </section>
+</div>
+  
+
+
+  <!-- Script for mobile menu -->
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+</html>
